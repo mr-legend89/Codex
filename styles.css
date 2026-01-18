@@ -1,0 +1,409 @@
+:root {
+  color-scheme: light;
+  --cream: #f8efe6;
+  --cocoa: #2b1b12;
+  --espresso: #3b2418;
+  --latte: #e7b07c;
+  --foam: #f9ebdd;
+  --accent: #c38c5e;
+  --shadow: rgba(27, 14, 7, 0.2);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: var(--cream);
+  color: var(--cocoa);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  width: min(1200px, 92%);
+  margin: 0 auto;
+}
+
+.site-header {
+  background: rgba(248, 239, 230, 0.9);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(10px);
+}
+
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 0;
+}
+
+.logo {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  display: grid;
+  line-height: 1.1;
+}
+
+.site-nav {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+}
+
+.site-nav a {
+  text-decoration: none;
+  color: var(--espresso);
+  font-weight: 500;
+}
+
+button {
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  border-radius: 999px;
+  padding: 0.7rem 1.6rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+.primary {
+  background: var(--cocoa);
+  color: white;
+}
+
+.secondary {
+  background: white;
+  color: var(--cocoa);
+  border: 1px solid rgba(43, 27, 18, 0.2);
+}
+
+.ghost {
+  background: transparent;
+  color: var(--cocoa);
+  border: 1px solid rgba(43, 27, 18, 0.2);
+}
+
+.hero {
+  padding: 4rem 0 5rem;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 3rem;
+  align-items: center;
+}
+
+.hero-content h1 {
+  font-size: clamp(2.6rem, 4vw, 3.6rem);
+  font-family: "Playfair Display", serif;
+  line-height: 1.1;
+  margin: 0.8rem 0 1.2rem;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-size: 0.7rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin: 1.6rem 0;
+}
+
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.hero-stats h3 {
+  font-size: 1.6rem;
+}
+
+.hero-visual {
+  position: relative;
+}
+
+.hero-card {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  background: white;
+  padding: 1.2rem 1.4rem;
+  border-radius: 1rem;
+  width: min(260px, 80%);
+  box-shadow: 0 20px 40px var(--shadow);
+}
+
+.story {
+  padding: 4rem 0;
+  background: white;
+}
+
+.story-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.story h2,
+.menu h2,
+.demos h2,
+.buy h2,
+.login h2 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  margin-bottom: 1rem;
+}
+
+.story-list {
+  margin-top: 1.8rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.story-item {
+  background: var(--cream);
+  padding: 1rem 1.2rem;
+  border-radius: 0.8rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.story-item span {
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.story-visual {
+  position: relative;
+}
+
+.floating-card {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  background: var(--cocoa);
+  color: white;
+  padding: 1rem 1.2rem;
+  border-radius: 1rem;
+  width: min(240px, 70%);
+  box-shadow: 0 20px 40px var(--shadow);
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.menu,
+.demos,
+.buy,
+.login {
+  padding: 4.5rem 0;
+}
+
+.menu-grid,
+.demo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: white;
+  padding: 1.6rem;
+  border-radius: 1.2rem;
+  box-shadow: 0 18px 40px rgba(32, 18, 10, 0.1);
+  display: grid;
+  gap: 1rem;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-tag {
+  background: var(--foam);
+  color: var(--espresso);
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.buy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.buy ul {
+  list-style: none;
+  margin: 1.2rem 0 2rem;
+}
+
+.buy li {
+  margin-bottom: 0.6rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.buy li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.buy-card {
+  background: white;
+  padding: 1.6rem;
+  border-radius: 1.4rem;
+  display: grid;
+  gap: 1rem;
+  box-shadow: 0 20px 40px rgba(30, 18, 10, 0.12);
+}
+
+.login {
+  background: white;
+}
+
+.login-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  align-items: center;
+}
+
+.login-card {
+  background: var(--cream);
+  padding: 1.6rem;
+  border-radius: 1.2rem;
+  margin-top: 1.5rem;
+}
+
+.login-card form {
+  display: grid;
+  gap: 1rem;
+}
+
+label {
+  display: grid;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+input {
+  padding: 0.7rem 0.9rem;
+  border-radius: 0.6rem;
+  border: 1px solid rgba(43, 27, 18, 0.2);
+  font: inherit;
+}
+
+.login-stats {
+  display: grid;
+  gap: 1rem;
+}
+
+.login-stats div {
+  background: var(--cream);
+  padding: 1rem 1.2rem;
+  border-radius: 1rem;
+}
+
+.site-footer {
+  background: var(--cocoa);
+  color: white;
+  padding: 3rem 0;
+}
+
+.footer-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  width: min(360px, 90%);
+  text-align: center;
+  position: relative;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content .close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  font-size: 1.4rem;
+  padding: 0.2rem 0.6rem;
+}
+
+.modal.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+@media (max-width: 720px) {
+  .site-nav {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .hero-card,
+  .floating-card {
+    position: static;
+    margin-top: 1rem;
+  }
+}
