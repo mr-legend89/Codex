@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ember & Bloom Coffee Atelier</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrapper">
+        <div class="logo">
+          <span>Ember</span>
+          <span>&amp; Bloom</span>
+        </div>
+        <nav class="site-nav">
+          <a href="#story">Story</a>
+          <a href="#menu">Menu</a>
+          <a href="#demos">Demos</a>
+          <a href="#buy">Buy</a>
+          <button class="ghost" id="loginTrigger">Login</button>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-content">
+            <p class="eyebrow">Custom Roasts · Seoul · Berlin · Nairobi</p>
+            <h1>Crafted coffee experiences for curious sippers.</h1>
+            <p>
+              Ember &amp; Bloom blends micro-lot beans, floral botanicals, and modern brew
+              methods to create a gallery of flavors. Browse limited drops, join a demo
+              brew class, or log in to reserve a private tasting.
+            </p>
+            <div class="hero-actions">
+              <button class="primary">Book a Tasting</button>
+              <button class="secondary">Explore the Menu</button>
+            </div>
+            <div class="hero-stats">
+              <div>
+                <h3>42</h3>
+                <span>Origin partners</span>
+              </div>
+              <div>
+                <h3>15k</h3>
+                <span>Monthly members</span>
+              </div>
+              <div>
+                <h3>7</h3>
+                <span>Live demo labs</span>
+              </div>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <img src="assets/coffee-hero.svg" alt="Custom coffee cup illustration" />
+            <div class="hero-card">
+              <h4>Today’s pour</h4>
+              <p>Kenya Nyeri • Notes of peach, cacao, wild honey.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="story" id="story">
+        <div class="container story-grid">
+          <div>
+            <h2>Where roasted science meets slow ritual.</h2>
+            <p>
+              We partner with growers across four continents and roast in small batches
+              using artisan profiles. Our baristas curate a daily flight so every cup tells
+              the story of its terroir.
+            </p>
+            <div class="story-list">
+              <div class="story-item">
+                <span>01</span>
+                <p>Seasonal fermentation experiments and honey process lots.</p>
+              </div>
+              <div class="story-item">
+                <span>02</span>
+                <p>Custom latte art map inspired by local galleries.</p>
+              </div>
+              <div class="story-item">
+                <span>03</span>
+                <p>Memberships that unlock night roastery demos and tastings.</p>
+              </div>
+            </div>
+          </div>
+          <div class="story-visual">
+            <img src="assets/coffee-beans.svg" alt="Coffee bean artwork" />
+            <div class="floating-card">
+              <h4>Roaster’s note</h4>
+              <p>“We tune every roast to highlight origin sweetness.”</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="menu" id="menu">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Curated coffee menu</h2>
+            <p>Custom data cards rendered from our demo dataset.</p>
+          </div>
+          <div class="menu-grid" id="menuGrid"></div>
+        </div>
+      </section>
+
+      <section class="demos" id="demos">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Live brew demos</h2>
+            <p>Reserve a seat or watch a stream from our roastery labs.</p>
+          </div>
+          <div class="demo-grid" id="demoGrid"></div>
+        </div>
+      </section>
+
+      <section class="buy" id="buy">
+        <div class="container buy-grid">
+          <div>
+            <h2>Buy the demo kit</h2>
+            <p>
+              Take the tasting home with a limited demo box: micro-lot beans, recipe cards,
+              and our ceramic dripper.
+            </p>
+            <ul>
+              <li>6 x 50g origin samplers</li>
+              <li>Handwritten brew journal</li>
+              <li>Member-only latte art tutorial</li>
+            </ul>
+            <div class="buy-actions">
+              <button class="primary">Buy Demo Kit</button>
+              <button class="ghost">Download Recipes</button>
+            </div>
+          </div>
+          <div class="buy-card">
+            <img src="assets/latte-art.svg" alt="Latte art preview" />
+            <div>
+              <h3>$68</h3>
+              <p>Ships in 48 hours · 12 cups included</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="login" id="login">
+        <div class="container login-grid">
+          <div>
+            <h2>Member login</h2>
+            <p>
+              Log in to access your roast library, demo bookings, and loyalty status.
+            </p>
+            <div class="login-card">
+              <form id="loginForm">
+                <label>
+                  Email
+                  <input type="email" placeholder="you@emberbloom.com" required />
+                </label>
+                <label>
+                  Password
+                  <input type="password" placeholder="••••••••" required />
+                </label>
+                <button class="primary" type="submit">Log in</button>
+                <button class="secondary" type="button" id="demoLogin">Use demo login</button>
+              </form>
+            </div>
+          </div>
+          <div class="login-stats">
+            <div>
+              <h3>Silver</h3>
+              <p>Demo credits available: 3</p>
+            </div>
+            <div>
+              <h3>Gold</h3>
+              <p>Private tasting rooms unlocked</p>
+            </div>
+            <div>
+              <h3>Platinum</h3>
+              <p>Roaster concierge access</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <h3>Ember &amp; Bloom</h3>
+          <p>Custom coffee studios · crafted daily.</p>
+        </div>
+        <div>
+          <h4>Visit</h4>
+          <p>77 Atelier Lane, Seoul</p>
+          <p>Open 7AM – 10PM</p>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p>hello@emberbloom.com</p>
+          <p>+82 02 555 0112</p>
+        </div>
+      </div>
+    </footer>
+
+    <div class="modal" id="loginModal" aria-hidden="true">
+      <div class="modal-content">
+        <button class="close" id="closeModal">×</button>
+        <h3>Welcome back</h3>
+        <p>Use the demo login to explore member-only content.</p>
+        <button class="primary" id="modalDemoLogin">Demo login</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
